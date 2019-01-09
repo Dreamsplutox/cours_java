@@ -1,0 +1,20 @@
+logic to get neighbours
+
+tab[0] = actual_word
+while (tab[c] != null){ // parcours du tableau "final" (qui contient les voisins)
+    //tr
+    for(i = 0; i < words.length; i++){//parcours de la liste words
+        //fonction is present
+        if(voisin(actual_word, words[i]) == 1 && actual_word != words[i]){ //si le mot de words est un voisin du mot actuel
+            size++ //on augmente la taille du tableau
+            c++;
+            tab[c] = words[i]; //on met le voisin dans le tableau
+        endif
+
+        //dans le for gérer le cas où on ne trouve pas de voisin pour se préparer à quitter le while
+    Efor
+    //a la fin du for on a bien récupéré tous les voisins de l'actual word, on change donc l'actual word
+    actual_word = tab[c];
+Ewhile
+
+
