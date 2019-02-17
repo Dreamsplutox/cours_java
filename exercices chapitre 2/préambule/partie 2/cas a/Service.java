@@ -19,8 +19,11 @@ public class Service {
         this.name = name;
     }
 
-    public String getList_of_employees() {
-        return list_of_employees.toString();
+    public void getList_of_employees() {
+        //return list_of_employees.toString();
+        for(int i = 0; i < list_of_employees.size(); i++){
+            System.out.println(list_of_employees.get(i).firstname + " " + list_of_employees.get(i).lastname + " " + list_of_employees.get(i).salary + " " + list_of_employees.get(i).service);
+        }
     }
 
     public void setList_of_employees(ArrayList<Employee> list_of_employees) {
