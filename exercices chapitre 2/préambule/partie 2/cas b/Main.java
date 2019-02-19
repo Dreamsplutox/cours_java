@@ -10,6 +10,7 @@ public class Main {
         parents.add(perso2);
         Person perso3 = new Person("Kevin", parents);
         System.out.println(perso3.getParents());
+        System.out.println(perso3.toString());
     }
 
 }

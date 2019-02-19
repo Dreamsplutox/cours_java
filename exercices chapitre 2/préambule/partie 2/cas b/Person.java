@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class Person {
     public String name;
+    public ArrayList<Person> parents;
 
     public String getName() {
         return name;
@@ -20,7 +21,6 @@ public class Person {
         this.parents = parents;
     }
 
-    public ArrayList<Person> parents;
 
     public Person(String name, ArrayList<Person>parents){
         this.name = name;
@@ -31,6 +31,18 @@ public class Person {
     public Person(String name){
         this.name = name;
         this.parents = new ArrayList<Person>();
+    }
+
+    @Override
+    public String toString() {
+        String my_string = this.name;
+
+
+        for(int i = 0; i < this.parents.size(); i++){
+            my_string += " parent : " + this.parents.get(i) + ",";
+        }
+
+        return my_string;
     }
 
     public void add_parent(Person parent){

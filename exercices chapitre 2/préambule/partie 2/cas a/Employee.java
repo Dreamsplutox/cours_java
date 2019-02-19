@@ -47,6 +47,13 @@ public class Employee {
     }
 
     public void setService(Service service) {
+        if(service.list_of_employees.contains(this)){
+            System.out.println("this : "+ this);
+            service.list_of_employees.remove(this);
+
+        }
+        service.add_employee(this);
+        this.service.list_of_employees.remove(this);
         this.service = service;
     }
 }
