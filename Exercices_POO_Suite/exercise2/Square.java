@@ -11,7 +11,6 @@ public class Square extends Rectangle {
     public String toString() {
         return "Square{" +
                 "width=" + width +
-                ", height=" + height +
                 '}';
     }
 

@@ -4,8 +4,9 @@ public class Cylinder extends Geometry3D{
     public double radius;
     public double height;
 
-    public Cylinder(double radius) {
+    public Cylinder(double radius, double height) {
         this.radius = radius;
+        this.height = height;
     }
 
     public double area(){
